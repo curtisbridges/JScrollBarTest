@@ -14,7 +14,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.text.DefaultCaret;
 
-public class Scroller extends JFrame {
+public class JScrollBarTest extends JFrame {
     Timer       timer;
     TimerTask   task;
 
@@ -22,7 +22,7 @@ public class Scroller extends JFrame {
     JTextArea   textArea;
     JScrollPane scrollPane;
 
-    public Scroller() {
+    public JScrollBarTest() {
         super("Scroller Test");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,7 +62,7 @@ public class Scroller extends JFrame {
         timer = new Timer("ScrollerThread");
         task = new TimerTask() {
             public void run() {
-                Scroller.this.doText();
+                JScrollBarTest.this.doText();
             }
         };
 
@@ -74,7 +74,7 @@ public class Scroller extends JFrame {
     }
 
     public static void main(String[] args) {
-        Scroller scroller = new Scroller();
+        JScrollBarTest scroller = new JScrollBarTest();
 
         scroller.setSize(640, 480);
         scroller.setVisible(true);
